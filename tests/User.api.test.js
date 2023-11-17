@@ -6,7 +6,7 @@ dotenv.config();
 describe("API Login", () => {
   it("success login", async () => {
     const user = {
-      email: "fikri@binar.co.id",
+      email: "ikbar@binar.co.id",
       password: "123456",
     };
     const response = await request(app).post("/v1/auth/login").send(user);
@@ -15,7 +15,7 @@ describe("API Login", () => {
 
   it("failed login : wrong password", async () => {
     const failedUser = {
-      email: "fikri@binar.co.id",
+      email: "ikbar@binar.co.id",
       password: "1234656",
     };
     const response = await request(app).post("/v1/auth/login").send(failedUser);
@@ -24,7 +24,7 @@ describe("API Login", () => {
 
   it("failed login : email not registered", async () => {
     const failedUser = {
-      email: "Fikri@binasr.co.id",
+      email: "ikbar@binasr.co.id",
       password: "1234656",
     };
     const response = await request(app).post("/v1/auth/login").send(failedUser);
@@ -36,7 +36,7 @@ describe("API Register", () => {
   it("success register", async () => {
     const user = {
       name: "Hihi",
-      email: "pppp@binar.co.id",
+      email: "cek3@binar.co.id",
       password: "123456",
     };
     const response = await request(app).post("/v1/auth/register").send(user);
@@ -45,7 +45,7 @@ describe("API Register", () => {
   it("failed register: email already registered", async () => {
     const failedUser = {
       name: "Hihi",
-      email: "fikri@binar.co.id",
+      email: "ikbar@binar.co.id",
       password: "123456",
     };
     const response = await request(app)
@@ -68,7 +68,7 @@ describe("API Register", () => {
 describe("API Get user", () => {
   it("success get user", async () => {
     const user = {
-      email: "fikri@binar.co.id",
+      email: "ikbar@binar.co.id",
       password: "123456",
     };
     const check = await request(app).post("/v1/auth/login").send(user);

@@ -4,7 +4,14 @@ const { Op } = require("sequelize");
 const bcrypt = require("bcryptjs");
 const { Role } = require("../../app/models");
 
-const names = ["Johnny", "Fikri", "Brian", "Ranggawarsita", "Jayabaya"];
+const names = [
+  "Johnny",
+  "Fikri",
+  "Brian",
+  "Ranggawarsita",
+  "Jayabaya",
+  "Ikbar",
+];
 
 module.exports = {
   async up(queryInterface, Sequelize) {
